@@ -45,13 +45,13 @@ export const Services: React.FC<ServicesProps> = ({ onOpenInquiry }) => {
           </h2>
         </div>
 
-        {/* Four Elegant Rows with Hairline Dividers */}
+        {/* Four Elegant Rows with Hairline Dividers (Taller rows, deep breathing room) */}
         <div className="border-t border-white/[0.08]">
           {services.map((item) => (
             <div
               key={item.num}
               onClick={() => onOpenInquiry(`Service: ${item.title}`)}
-              className="group relative border-b border-white/[0.08] py-16 sm:py-24 transition-transform duration-500 hover:translate-x-2 cursor-pointer"
+              className="group relative border-b border-white/[0.08] py-20 sm:py-28 transition-transform duration-500 hover:translate-x-2 cursor-pointer"
             >
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-12 items-baseline">
                 {/* 01, 02, etc. */}

@@ -10,18 +10,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenConsultati
   return (
     <section
       id="contact"
-      className="relative min-h-[85vh] sm:min-h-[90vh] flex flex-col justify-center items-center px-6 sm:px-12 bg-[#070707] overflow-hidden text-center"
+      className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center px-6 sm:px-12 py-32 sm:py-48 bg-[#070707] overflow-hidden text-center"
     >
-      {/* Subtle Cinematic Automotive Detail in Background */}
+      {/* Cinematic Automotive Silhouette in Background (12–14% visibility) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
           src="https://images.cdn-files-a.com/uploads/4901520/800_603846625d00c.jpg"
-          alt="Luxury Automotive Finale"
-          className="w-full h-full object-cover object-center filter contrast-[1.15] brightness-[0.22] saturate-[0.7]"
+          alt="Luxury Automotive Silhouette"
+          className="w-full h-full object-cover object-[center_42%] filter contrast-[1.25] brightness-[0.95] saturate-[0.5] opacity-[0.13]"
         />
-        {/* Soft Vignette & Atmospheric Falloff */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-[#070707]/60 to-[#070707]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/80 via-transparent to-[#070707]/80" />
+        {/* Soft Vignette & Seamless Black Boundary Blend */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-[#070707]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-transparent to-[#070707]" />
       </div>
 
       {/* Cinematic Finale Content */}
@@ -62,7 +62,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenConsultati
             className="group inline-flex items-center space-x-3 text-[11px] tracking-[0.32em] uppercase text-[#F3F0E8] hover:text-white px-8 py-4 border border-white/[0.2] hover:border-[#B99A5B] transition-all duration-300 bg-[#070707]/60 backdrop-blur-md cursor-pointer"
           >
             <span>ENQUIRE</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#B99A5B] group-hover:translate-x-1.5 transition-transform duration-300" />
+            <span className="text-[#B99A5B] group-hover:translate-x-1.5 transition-transform duration-300">
+              →
+            </span>
           </button>
         </motion.div>
       </div>

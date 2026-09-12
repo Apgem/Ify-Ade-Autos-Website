@@ -48,18 +48,21 @@ export default function App() {
       {/* Refined Minimal Luxury Navigation */}
       <Navbar onOpenInquiry={handleOpenInquiry} />
 
-      {/* Main Experience */}
+      {/* Main Experience: Distinct Visual Rhythm & Cadence */}
       <main id="main-content">
-        {/* HERO: Cinematic Automotive Campaign */}
+        {/* 1. FULL-BLEED IMAGE: Hero Automotive Campaign */}
         <Hero
           onExploreInventory={handleExploreInventory}
           onContactClick={handleContactClick}
         />
 
-        {/* FEATURED AUTOMOBILE: Full-Width Feature */}
+        {/* 2. ASYMMETRIC EDITORIAL SECTION: 74vh Featured Vehicle Showcase */}
         <FeaturedVehicle onSelectCar={(car) => setSelectedCar(car)} />
 
-        {/* THE COLLECTION: Editorial Rhythm & Asymmetric Compositions */}
+        {/* 3. QUIET TEXT SECTION: Authentic Brand Provenance Story */}
+        <AboutSection />
+
+        {/* 4. FULL-BLEED AUTOMOTIVE MOMENT: Lookbook Collection with Large Vehicles */}
         <InventorySection
           onSelectCar={(car) => setSelectedCar(car)}
           selectedCategory={selectedCategory}
@@ -67,19 +70,16 @@ export default function App() {
           onOpenInquiry={handleOpenInquiry}
         />
 
-        {/* SERVICES: Editorial List with Large Numbers & Hairlines */}
+        {/* 5. EDITORIAL LIST: Automotive Capabilities */}
         <Services onOpenInquiry={handleOpenInquiry} />
 
-        {/* A BETTER WAY: Asymmetric Layout & Four Quiet Principles */}
+        {/* 6. MANIFESTO: A Better Way to Buy Your Next Car */}
         <WhyUs />
 
-        {/* CLIENT EXPERIENCE: Large Quotation & Whitespace */}
+        {/* 7. TESTIMONIAL: Large Editorial Quotation with Subtle Texture */}
         <Testimonials />
 
-        {/* BRAND STORY: Built Around the Love of Cars */}
-        <AboutSection />
-
-        {/* FINAL CTA: Dramatic Dark Section */}
+        {/* 8. CINEMATIC CTA: Finale with Automotive Silhouette */}
         <ContactSection onOpenConsultation={() => handleOpenInquiry('Showroom Acquisition Consultation')} />
       </main>
 

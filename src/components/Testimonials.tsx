@@ -12,8 +12,19 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="reviews" className="py-44 sm:py-64 px-6 sm:px-10 lg:px-16 bg-[#070707]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="reviews" className="relative py-44 sm:py-64 px-6 sm:px-10 lg:px-16 bg-[#070707] overflow-hidden">
+      {/* Extremely subtle automotive texture in background (6% opacity, pure atmosphere) */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img
+          src="https://images.cdn-files-a.com/uploads/4901520/800_6038466b95142.jpg"
+          alt="Atmospheric automotive texture"
+          className="w-full h-full object-cover object-center filter grayscale contrast-125 opacity-[0.06]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-transparent to-[#070707]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070707] via-transparent to-[#070707]" />
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={current.id}

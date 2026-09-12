@@ -96,12 +96,12 @@ export const VehicleModal: React.FC<VehicleModalProps> = ({ car, onClose, onBook
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               <div className="lg:col-span-7 space-y-6">
                 <div className="space-y-2">
-                  <span className="text-[10px] tracking-[0.3em] uppercase text-[#B99A5B] block">
-                    {car.make} • {car.year}
+                  <span className="text-[10px] tracking-[0.3em] uppercase text-[#8A877F] font-mono block">
+                    {car.year}
                   </span>
 
-                  <h2 className="font-sans text-2xl sm:text-4xl text-[#F3F0E8] font-light tracking-tight">
-                    {car.model}
+                  <h2 className="font-sans text-3xl sm:text-4xl text-[#F3F0E8] font-light tracking-tight">
+                    {car.make} <span className="font-display-serif italic font-normal text-white">{car.model}</span>
                   </h2>
                 </div>
 

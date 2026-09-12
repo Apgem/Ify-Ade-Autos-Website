@@ -77,11 +77,10 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
           </div>
         </div>
 
-        {/* Editorial Rhythm Layout: Alternating Large Scale Spreads, No Paragraph Bloat */}
-        <div className="space-y-40 sm:space-y-56">
+        {/* Editorial Lookbook Layout: Expansive Spreads with Monumental Vehicles & Deep Whitespace */}
+        <div className="space-y-48 sm:space-y-64 lg:space-y-80">
           {displayedCars.map((car, idx) => {
             const isEven = idx % 2 === 0;
-            const itemNumber = `0${idx + 2}`; // following 01 featured
 
             return (
               <article
@@ -90,43 +89,38 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                 className="group cursor-pointer block"
               >
                 {isEven ? (
-                  /* Layout A: Dominant Large Image Left (8 cols), Crisp Typography Right (4 cols) */
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                  /* Layout A: Large Image Left, Clean Lookbook Typography Right */
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
                     <div className="lg:col-span-8">
-                      <div className="relative aspect-[16/10] sm:aspect-[21/12] overflow-hidden bg-[#0D0D0D] border border-white/[0.08]">
+                      <div className="relative aspect-[16/10] sm:aspect-[16/9.5] overflow-hidden bg-[#0D0D0D] border border-white/[0.08]">
                         <img
                           src={car.images[0]}
                           alt={`${car.year} ${car.make} ${car.model}`}
-                          className="w-full h-full object-cover filter contrast-[1.08] brightness-[0.92] group-hover:scale-105 transition-transform duration-1000 ease-out"
+                          className="w-full h-full object-cover filter contrast-[1.12] brightness-[0.96] group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/60 via-transparent to-transparent opacity-50 group-hover:opacity-10 transition-opacity duration-700" />
-                        
-                        {/* Index Number */}
-                        <div className="absolute top-6 left-6 text-[10px] tracking-[0.3em] text-[#8A877F] font-mono">
-                          {itemNumber}
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/40 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none" />
                       </div>
                     </div>
 
-                    <div className="lg:col-span-4 space-y-6 lg:pl-6">
+                    <div className="lg:col-span-4 space-y-6 lg:pl-4">
                       <div className="space-y-3">
-                        <span className="text-[10px] tracking-[0.32em] uppercase text-[#B99A5B] block font-mono">
-                          {car.year} / {car.condition.toUpperCase()}
+                        <span className="text-[10px] tracking-[0.3em] text-[#8A877F] font-mono block">
+                          {car.year}
                         </span>
 
-                        <h3 className="font-sans text-2xl sm:text-4xl font-light text-[#F3F0E8] tracking-tight leading-snug">
+                        <h3 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light text-[#F3F0E8] tracking-tight leading-[0.92]">
                           {car.make} <br />
                           <span className="font-display-serif italic font-normal text-white">
                             {car.model}
                           </span>
                         </h3>
 
-                        <p className="text-[11px] text-[#8A877F] tracking-[0.22em] uppercase pt-2 font-mono">
-                          {car.engine} • {car.transmission.split(' ')[0]}
+                        <p className="text-xs text-[#8A877F]/60 font-mono tracking-[0.2em] uppercase pt-1">
+                          {car.engine}
                         </p>
                       </div>
 
-                      <div className="pt-4">
+                      <div className="pt-3">
                         <div className="inline-flex items-center space-x-2 text-[11px] tracking-[0.28em] uppercase text-[#F3F0E8] py-2 relative">
                           <span>VIEW AUTOMOBILE</span>
                           <span className="text-[#B99A5B] group-hover:translate-x-1.5 transition-transform duration-300">
@@ -138,27 +132,27 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                     </div>
                   </div>
                 ) : (
-                  /* Layout B: Reverse Composition — Typography Left (4 cols), Dominant Image Right (8 cols) */
-                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
-                    <div className="lg:col-span-4 lg:order-1 space-y-6 lg:pr-6">
+                  /* Layout B: Reverse Composition — Clean Typography Left, Large Image Right */
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-center">
+                    <div className="lg:col-span-4 lg:order-1 space-y-6 lg:pr-4">
                       <div className="space-y-3">
-                        <span className="text-[10px] tracking-[0.32em] uppercase text-[#B99A5B] block font-mono">
-                          {car.year} / {car.condition.toUpperCase()}
+                        <span className="text-[10px] tracking-[0.3em] text-[#8A877F] font-mono block">
+                          {car.year}
                         </span>
 
-                        <h3 className="font-sans text-2xl sm:text-4xl font-light text-[#F3F0E8] tracking-tight leading-snug">
+                        <h3 className="font-sans text-4xl sm:text-5xl lg:text-6xl font-light text-[#F3F0E8] tracking-tight leading-[0.92]">
                           {car.make} <br />
                           <span className="font-display-serif italic font-normal text-white">
                             {car.model}
                           </span>
                         </h3>
 
-                        <p className="text-[11px] text-[#8A877F] tracking-[0.22em] uppercase pt-2 font-mono">
-                          {car.horsepower || car.engine} • {car.drivetrain}
+                        <p className="text-xs text-[#8A877F]/60 font-mono tracking-[0.2em] uppercase pt-1">
+                          {car.engine}
                         </p>
                       </div>
 
-                      <div className="pt-4">
+                      <div className="pt-3">
                         <div className="inline-flex items-center space-x-2 text-[11px] tracking-[0.28em] uppercase text-[#F3F0E8] py-2 relative">
                           <span>VIEW AUTOMOBILE</span>
                           <span className="text-[#B99A5B] group-hover:translate-x-1.5 transition-transform duration-300">
@@ -170,17 +164,13 @@ export const InventorySection: React.FC<InventorySectionProps> = ({
                     </div>
 
                     <div className="lg:col-span-8 lg:order-2">
-                      <div className="relative aspect-[16/10] sm:aspect-[21/12] overflow-hidden bg-[#0D0D0D] border border-white/[0.08]">
+                      <div className="relative aspect-[16/10] sm:aspect-[16/9.5] overflow-hidden bg-[#0D0D0D] border border-white/[0.08]">
                         <img
                           src={car.images[0]}
                           alt={`${car.year} ${car.make} ${car.model}`}
-                          className="w-full h-full object-cover filter contrast-[1.08] brightness-[0.92] group-hover:scale-105 transition-transform duration-1000 ease-out"
+                          className="w-full h-full object-cover filter contrast-[1.12] brightness-[0.96] group-hover:scale-105 transition-transform duration-1000 ease-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/60 via-transparent to-transparent opacity-50 group-hover:opacity-10 transition-opacity duration-700" />
-                        
-                        <div className="absolute top-6 right-6 text-[10px] tracking-[0.3em] text-[#8A877F] font-mono">
-                          {itemNumber}
-                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#070707]/40 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none" />
                       </div>
                     </div>
                   </div>

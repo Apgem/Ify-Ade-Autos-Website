@@ -26,7 +26,7 @@ export const WhyUs: React.FC = () => {
         {/* Asymmetric Editorial Grid: Monumental Headline + Distant Paragraph */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 mb-32 sm:mb-44 items-start">
           <div className="lg:col-span-8">
-            <h2 className="font-sans text-[clamp(2.75rem,7vw,6.5rem)] font-light text-[#F3F0E8] tracking-[-0.03em] leading-[0.94]">
+            <h2 className="font-sans text-[clamp(3.5rem,9vw,8rem)] font-light text-[#F3F0E8] tracking-[-0.03em] leading-[0.92]">
               A BETTER WAY <br />
               <span className="font-display-serif italic font-normal text-white">
                 TO BUY YOUR
