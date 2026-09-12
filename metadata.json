@@ -1,0 +1,6 @@
+{
+  "name": "IFYADE AUTOS — Premium Automotive Showroom | Akure",
+  "description": "Precision, luxury, and confidence. Verified foreign-used and upgraded automobiles in Akure, Ondo State. Physical showroom beside Old Diamond Bank, Oyemekun Road.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
